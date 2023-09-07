@@ -25,5 +25,13 @@ public class Drinks {
             default:
                 throw new IllegalArgumentException("Невідомий вибір напою: " + choice);
         }
+
+    }
+
+    public static void showMenu() {
+        System.out.println("Меню напоїв:");
+        for (DrinksMachine drink : DrinksMachine.values()) {
+            System.out.println(drink.ordinal() + ". " + drink + " - " + getPrice(drink) + " $");
+        }
     }
 }
